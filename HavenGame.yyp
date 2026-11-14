@@ -55,6 +55,7 @@
     {"id":{"name":"oCaveSpike","path":"objects/oCaveSpike/oCaveSpike.yy"}},
     {"id":{"name":"oCollisionBuilder","path":"objects/oCollisionBuilder/oCollisionBuilder.yy"}},
     {"id":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy"}},
+    {"id":{"name":"oFireball","path":"objects/oFireball/oFireball.yy"}},
     {"id":{"name":"oGame","path":"objects/oGame/oGame.yy"}},
     {"id":{"name":"oHazard","path":"objects/oHazard/oHazard.yy"}},
     {"id":{"name":"oPlay","path":"objects/oPlay/oPlay.yy"}},
@@ -64,18 +65,22 @@
     {"id":{"name":"oReturn","path":"objects/oReturn/oReturn.yy"}},
     {"id":{"name":"oSkySpike","path":"objects/oSkySpike/oSkySpike.yy"}},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy"}},
+
     {"id":{"name":"Cave","path":"rooms/Cave/Cave.yy"}},
     {"id":{"name":"Sky","path":"rooms/Sky/Sky.yy"}},
     {"id":{"name":"Test","path":"rooms/Test/Test.yy"}},
     {"id":{"name":"Title","path":"rooms/Title/Title.yy"}},
     {"id":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy"}},
+
     {"id":{"name":"EnemyMovement","path":"scripts/EnemyMovement/EnemyMovement.yy"}},
     {"id":{"name":"scrEnemy","path":"scripts/scrEnemy/scrEnemy.yy"}},
+
     {"id":{"name":"BackgroundMusic","path":"sounds/BackgroundMusic/BackgroundMusic.yy"}},
     {"id":{"name":"DeathSound","path":"sounds/DeathSound/DeathSound.yy"}},
     {"id":{"name":"playerDeath","path":"sounds/playerDeath/playerDeath.yy"}},
     {"id":{"name":"PogoStick","path":"sounds/PogoStick/PogoStick.yy"}},
     {"id":{"name":"SlimeBounce","path":"sounds/SlimeBounce/SlimeBounce.yy"}},
+
     {"id":{"name":"CaveSpike","path":"sprites/CaveSpike/CaveSpike.yy"}},
     {"id":{"name":"sCaveTileset","path":"sprites/sCaveTileset/sCaveTileset.yy"}},
     {"id":{"name":"sEarthMushroom","path":"sprites/sEarthMushroom/sEarthMushroom.yy"}},
@@ -108,6 +113,7 @@
     {"id":{"name":"sTitle","path":"sprites/sTitle/sTitle.yy"}},
     {"id":{"name":"sTutorial","path":"sprites/sTutorial/sTutorial.yy"}},
     {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy"}},
+
     {"id":{"name":"CaveTileset","path":"tilesets/CaveTileset/CaveTileset.yy"}},
     {"id":{"name":"EarthTileset","path":"tilesets/EarthTileset/EarthTileset.yy"}},
     {"id":{"name":"SkyTileset","path":"tilesets/SkyTileset/SkyTileset.yy"}}

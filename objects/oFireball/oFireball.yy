@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"oCamera",
+  "%Name":"oFireball",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oCamera",
+  "name":"oFireball",
   "overriddenProperties":[],
   "parent":{
     "name":"objects",
@@ -30,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sFireball",
+    "path":"sprites/sFireball/sFireball.yy",
+  },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }
