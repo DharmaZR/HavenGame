@@ -6,7 +6,7 @@ var _jump = keyboard_check(vk_space) || keyboard_check(vk_up) || keyboard_check(
 var _down = keyboard_check(vk_down) || keyboard_check(ord("S"));
 var _jump_released = action_prev && !_jump;
 action_prev = _jump;
-
+var _audioCharge = 0;
 if (_dir != 0) facing = _dir;
 
 // falling
@@ -15,11 +15,13 @@ if (grounded && !place_meeting(x, y + 1, oWall))
     grounded = false;
     charging = false;
     charge   = 0;
+	
 }
 
 // ground code
 if (grounded)
 {
+	
     hsp = 0;
     vsp = 0;
 
@@ -40,24 +42,37 @@ if (grounded)
             }
         }
     }
-    else if (charging && _jump_released)
+            else if (charging && _jump_released)
     {
-        // releasing
-        var _pct = charge / charge_time;
+        _audioCharge = charge;
+        var _pogo_sound = audio_play_sound(PogoStick, 1, false);
+		audio_sound_gain(_pogo_sound, 1, 1);
+		var _fade_time = (charge / charge_time) * 700; 
+        _fade_time = max(_fade_time, 50); 
+        audio_sound_gain(_pogo_sound, 0, _fade_time);
+		var _pct = charge / charge_time;
         if (debug_jump_meter) show_debug_message("LAUNCH at " + string(round(_pct * 100)) + "%");
         last_meter_step = -1;
         launch(lerp(jump_min, jump_max, _pct), false);
     }
-    else if (_dir != 0)
+
+
+              else if (_dir != 0)
     {
         // baby hop when pressing l or r
         hop_timer++;
         if (hop_timer >= hop_delay)
         {
+            var _hop_sound = audio_play_sound(PogoStick, 1, false);
+            audio_sound_gain(_hop_sound, 1, 1);
+            audio_sound_gain(_hop_sound, 0, 150);
             hsp = _dir * hop_hspeed;
             launch(hop_vspeed, true);
         }
     }
+
+
+
     else
     {
         hop_timer = hop_delay; 
