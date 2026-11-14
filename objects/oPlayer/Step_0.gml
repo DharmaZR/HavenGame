@@ -1,6 +1,23 @@
 if (oGame.frozen()) { image_speed = 0; exit; }
 image_speed = 1;
 
+// dead: arc off the screen, then restart
+if (dead)
+{
+    if (sprite_index != sPlayerDeath) { sprite_index = sPlayerDeath; image_index = 0; }
+    vsp = min(vsp + grav, max_fall);
+    x += hsp;
+    y += vsp;
+
+    var _cam = view_camera[0];
+    if (bbox_top > camera_get_view_y(_cam) + camera_get_view_height(_cam))
+    {
+        death_timer++;
+        if (death_timer >= death_wait * game_get_speed(gamespeed_fps)) oGame.restart_room();
+    }
+    exit;
+}
+
 var _dir = (keyboard_check(vk_right) || keyboard_check(ord("D"))) - (keyboard_check(vk_left) || keyboard_check(ord("A")));
 var _jump = keyboard_check(vk_space) || keyboard_check(vk_up) || keyboard_check(ord("W"));
 var _down = keyboard_check(vk_down) || keyboard_check(ord("S"));
@@ -147,6 +164,9 @@ if (vsp != 0)
     else y += vsp;
 }
 
+// fell into the void
+if (bbox_top > room_height) { die(); exit; }
+
 // end of level
 if (bbox_right >= room_width - 1) oGame.next_room();
 
@@ -155,7 +175,7 @@ if (hurt_timer > 0) hurt_timer--;
 else
 {
     var _src = noone;
-    with (oEnemy) if (!dead && place_meeting(x, y, other)) { _src = id; break; }
+    with (oEnemy) if (!dead && (place_meeting(x, y, other) || place_meeting(x + facing, y, other))) { _src = id; break; }
 
     if (_src == noone) _src = instance_place(x, y + 1, oHazard);
     if (_src == noone) _src = instance_place(x, y - 1, oHazard);
