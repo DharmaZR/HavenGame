@@ -6,11 +6,7 @@
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-<<<<<<< Updated upstream:rooms/Room1/Room1.yy
-    {"name":"inst_C011B1D0","path":"rooms/Room1/Room1.yy",},
-=======
     {"name":"inst_C011B1D0","path":"rooms/Test/Test.yy",},
->>>>>>> Stashed changes:rooms/Test/Test.yy
   ],
   "isDnd":false,
   "layers":[
