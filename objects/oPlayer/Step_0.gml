@@ -1,7 +1,8 @@
 var _dir = (keyboard_check(vk_right) || keyboard_check(ord("D"))) - (keyboard_check(vk_left) || keyboard_check(ord("A")));
-var _action = keyboard_check(vk_space) || keyboard_check(ord("S")) || keyboard_check(vk_down);
-var _action_released = action_prev && !_action;
-action_prev = _action;
+var _jump = keyboard_check(vk_space) || keyboard_check(vk_up) || keyboard_check(ord("W"));
+var _down = keyboard_check(vk_down) || keyboard_check(ord("S"));
+var _jump_released = action_prev && !_jump;
+action_prev = _jump;
 
 if (_dir != 0) facing = _dir;
 
@@ -19,7 +20,7 @@ if (grounded)
     hsp = 0;
     vsp = 0;
 
-    if (_action)
+    if (_jump)
     {
         // charge
         charging = true;
@@ -36,7 +37,7 @@ if (grounded)
             }
         }
     }
-    else if (charging && _action_released)
+    else if (charging && _jump_released)
     {
         // releasing
         var _pct = charge / charge_time;
@@ -64,7 +65,7 @@ if (grounded)
 if (!grounded)
 {
     // hold down to fall faster... super smash bros ref omg
-    var _dive = _action && !super_used;
+    var _dive = _down && !super_used;
     var _g   = _dive ? grav_dive     : grav;
     var _cap = _dive ? max_fall_dive : max_fall;
     vsp = min(vsp + _g, _cap);
@@ -98,6 +99,18 @@ if (hsp != 0)
     else x += hsp;
 }
 
+// stomp
+if (vsp > 0)
+{
+    var _e = instance_place(x, y + vsp, oEnemy);
+    if (_e != noone && !_e.dead && bbox_bottom <= _e.bbox_top + 1)
+    {
+        with (_e) enemy_stomp();
+        launch(stomp_bounce, false);
+        on_bounce(false);
+    }
+}
+
 // Vertical
 if (vsp != 0)
 {
@@ -110,7 +123,7 @@ if (vsp != 0)
             y += _sv;
         }
 
-        if (vsp > 0) land(vsp, _action);           // hit the floor
+        if (vsp > 0) land(vsp, _down);           // hit the floor
         else         vsp = -vsp * ceiling_bounce;  // hit a ceiling
     }
     else y += vsp;

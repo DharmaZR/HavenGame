@@ -5,10 +5,10 @@ max_fall        = 10;
 max_fall_dive   = 14;
 
 // air
-air_accel       = 0.30;
-air_max_speed   = 2.5;
+air_accel       = 0.35;
+air_max_speed   = 2.75;
 air_turn_mult   = 2.0;
-air_friction    = 0.40;
+air_friction    = 0.37;
 
 // hop
 hop_vspeed      = 2.4;
@@ -22,14 +22,20 @@ charge_time = 20;
 
 // bounce
 bounce_keep = 0.70; // fraction of height kept on a neutral bounce
+bounce_keep_nosuper = 0.40; // same, while super is used up
 super_mult= 1.10;
 super_max = 10;
 bounce_min = 5.0;
 ceiling_bounce  = 0.0;
+stomp_bounce    = 6.0;
 
 // no-super flash
 nosuper_col = make_colour_rgb(150, 150, 150);
 nosuper_rate  = 6; // frames per flash
+
+// full charge flash
+charged_alpha = 0.45;
+charged_rate  = 4;
 
 // animation
 anim_jump_speed = 2.0;
@@ -91,7 +97,8 @@ land = function(_impact, _holding_action)
     else if (!was_hop && _impact >= bounce_min)
     {
         // height scales with speed squared
-        launch(min(_impact * sqrt(bounce_keep), super_max), false);
+        var _keep = super_used ? bounce_keep_nosuper : bounce_keep;
+        launch(min(_impact * sqrt(_keep), super_max), false);
         on_bounce(false);
     }
     else
