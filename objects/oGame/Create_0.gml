@@ -32,7 +32,11 @@ update_music = function()
     if (music_inst != -1) audio_stop_sound(music_inst);
     music      = _track;
     music_inst = -1;
-    if (_track != noone) music_inst = audio_play_sound(_track, 10, false, music_gain);
+    if (_track != noone)
+    {
+        music_inst = audio_play_sound(_track, 10, false, 0);
+        audio_sound_gain(music_inst, music_gain, fade_in_time * 1000);
+    }
 }
 
 next_room = function()
@@ -41,6 +45,10 @@ next_room = function()
     state = "out";
     target_room = room_next(room);
     if (target_room == -1) target_room = room;
+
+    // fade music only if the next room plays something else
+    if (music_inst != -1 && room_music(target_room) != music)
+        audio_sound_gain(music_inst, 0, fade_out_time * 1000);
 }
 
 frozen = function()

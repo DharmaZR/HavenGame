@@ -140,7 +140,7 @@ if (hurt_timer > 0) hurt_timer--;
 else
 {
     var _src = noone;
-    with (oEnemy) if (!dead && place_meeting(x, y, other)) { _src = id; break; }
+    with (oEnemy) if (!dead && (place_meeting(x, y, other) || place_meeting(x + facing, y, other))) { _src = id; break; }
 
     if (_src == noone) _src = instance_place(x, y + 1, oHazard);
     if (_src == noone) _src = instance_place(x, y - 1, oHazard);
