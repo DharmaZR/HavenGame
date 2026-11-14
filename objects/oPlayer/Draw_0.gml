@@ -1,5 +1,7 @@
 flash_timer++;
 
+if (hurt_timer > 0 && (flash_timer div hurt_blink) mod 2 == 0) exit;
+
 var _col = image_blend;
 if (super_used && (flash_timer div nosuper_rate) mod 2 == 0) _col = nosuper_col;
 
