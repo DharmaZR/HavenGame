@@ -129,6 +129,21 @@ if (vsp != 0)
     else y += vsp;
 }
 
+// damage
+if (hurt_timer > 0) hurt_timer--;
+else
+{
+    var _src = noone;
+    with (oEnemy) if (!dead && place_meeting(x, y, other)) { _src = id; break; }
+
+    if (_src == noone) _src = instance_place(x, y + 1, oHazard);
+    if (_src == noone) _src = instance_place(x, y - 1, oHazard);
+    if (_src == noone) _src = instance_place(x + 1, y, oHazard);
+    if (_src == noone) _src = instance_place(x - 1, y, oHazard);
+
+    if (_src != noone) hurt(_src);
+}
+
 // animating
 var _spr;
 if (grounded)

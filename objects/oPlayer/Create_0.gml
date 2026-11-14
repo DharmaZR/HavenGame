@@ -29,6 +29,13 @@ bounce_min = 5.0;
 ceiling_bounce  = 0.0;
 stomp_bounce    = 6.0;
 
+// health
+hp_max        = 7;
+hurt_iframes  = 60;
+hurt_knock_h  = 2.5;
+hurt_knock_v  = 4.0;
+hurt_blink    = 4;
+
 // no-super flash
 nosuper_col = make_colour_rgb(150, 150, 150);
 nosuper_rate  = 6; // frames per flash
@@ -47,6 +54,9 @@ meter_y = 16;
 meter_w = 200;
 meter_h = 20;
 meter_border = 2;
+meter_gap = 4; // space between health and jump bars
+hp_col = c_red;
+hp_col_back = make_colour_rgb(70, 0, 0);
 meter_col = c_yellow;
 meter_col_full  = make_colour_rgb(255, 255, 170);
 meter_flash_rate = 4; // frames per flash when full
@@ -67,6 +77,8 @@ last_meter_step = -1;
 bounce_count = 0;
 super_used  = false;
 flash_timer = 0;
+hp = hp_max;
+hurt_timer = 0;
 
 mask_index = sPlayerIdle;
 
@@ -110,6 +122,19 @@ land = function(_impact, _holding_action)
         hop_timer = 0;
         super_used = false;
     }
+}
+
+hurt = function(_src)
+{
+    hp = max(hp - 1, 0);
+    hurt_timer = hurt_iframes;
+
+    var _dir = sign(x - (_src.bbox_left + _src.bbox_right) / 2);
+    if (_dir == 0) _dir = -facing;
+    hsp = _dir * hurt_knock_h;
+    launch(hurt_knock_v, false);
+
+    if (hp <= 0) room_restart();
 }
 
 on_bounce = function(_was_super)
