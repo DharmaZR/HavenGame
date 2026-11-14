@@ -109,11 +109,11 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"Sky","path":"rooms/Sky/Sky.yy",},},
+    {"roomId":{"name":"End","path":"rooms/End/End.yy",},},
     {"roomId":{"name":"Title","path":"rooms/Title/Title.yy",},},
     {"roomId":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy",},},
     {"roomId":{"name":"Cave","path":"rooms/Cave/Cave.yy",},},
-    {"roomId":{"name":"Sky","path":"rooms/Sky/Sky.yy",},},
-    {"roomId":{"name":"End","path":"rooms/End/End.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
