@@ -79,8 +79,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Test","path":"rooms/Test/Test.yy",},},
     {"roomId":{"name":"Cave","path":"rooms/Cave/Cave.yy",},},
+    {"roomId":{"name":"Test","path":"rooms/Test/Test.yy",},},
     {"roomId":{"name":"Title","path":"rooms/Title/Title.yy",},},
   ],
   "templateType":"game",
