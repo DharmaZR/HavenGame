@@ -11,6 +11,7 @@
   "defaultScriptType":0,
   "Folders":[
     {"$GMFolder":"","%Name":"Enemies","folderPath":"folders/Enemies.yy","name":"Enemies","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"audio","folderPath":"folders/audio.yy","name":"audio","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"objects","folderPath":"folders/objects.yy","name":"objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"rooms","folderPath":"folders/rooms.yy","name":"rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"sEnemies","folderPath":"folders/sEnemies.yy","name":"sEnemies","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -37,6 +38,9 @@
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
     {"id":{"name":"Cave","path":"rooms/Cave/Cave.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"BackgroundMusic","path":"sounds/BackgroundMusic/BackgroundMusic.yy",},},
+    {"id":{"name":"PogoStick","path":"sounds/PogoStick/PogoStick.yy",},},
+    {"id":{"name":"SlimeBounce","path":"sounds/SlimeBounce/SlimeBounce.yy",},},
     {"id":{"name":"sCaveTileset","path":"sprites/sCaveTileset/sCaveTileset.yy",},},
     {"id":{"name":"sEarthMushroom","path":"sprites/sEarthMushroom/sEarthMushroom.yy",},},
     {"id":{"name":"sEarthSlime","path":"sprites/sEarthSlime/sEarthSlime.yy",},},

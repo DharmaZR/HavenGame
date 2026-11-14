@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"PogoStick",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":1.6457143,
+  "exportDir":"",
+  "name":"PogoStick",
+  "parent":{
+    "name":"audio",
+    "path":"folders/audio.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"PogoStick.mp3",
+  "volume":1.0,
+}
