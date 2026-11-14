@@ -35,6 +35,7 @@
     {"id":{"name":"IceSlime","path":"objects/IceSlime/IceSlime.yy",},},
     {"id":{"name":"LavaMushroom","path":"objects/LavaMushroom/LavaMushroom.yy",},},
     {"id":{"name":"LavaSlime","path":"objects/LavaSlime/LavaSlime.yy",},},
+    {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oCollisionBuilder","path":"objects/oCollisionBuilder/oCollisionBuilder.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
