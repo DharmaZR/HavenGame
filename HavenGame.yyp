@@ -115,6 +115,7 @@
   "MetaData": {
     "IDEVersion": "2026.0.0.16"
   },
+  
   "name": "HavenGame",
   "resources": [
     {"id": {"name": "EarthMushroom", "path": "objects/EarthMushroom/EarthMushroom.yy"}},
@@ -125,10 +126,9 @@
     {"id": {"name": "LavaSlime", "path": "objects/LavaSlime/LavaSlime.yy"}},
     {"id": {"name": "oCamera", "path": "objects/oCamera/oCamera.yy"}},
     {"id": {"name": "oCollisionBuilder", "path": "objects/oCollisionBuilder/oCollisionBuilder.yy"}},
+    {"id": {"name": "oEnemy", "path": "objects/oEnemy/oEnemy.yy"}},
     {"id": {"name": "oPlayer", "path": "objects/oPlayer/oPlayer.yy"}},
-    {"id": {"name": "oWall", "path": "objects/oWall/oWall.yy"},
-
-    },
+    {"id": {"name": "oWall", "path": "objects/oWall/oWall.yy"}},
     {"id": {"name": "Cave", "path": "rooms/Cave/Cave.yy"}},
     {"id": {"name": "Test", "path": "rooms/Test/Test.yy"}},
     {"id": {"name": "Title", "path": "rooms/Title/Title.yy"}},
@@ -150,17 +150,18 @@
     {"id": {"name": "sLavaMushroomAttack", "path": "sprites/sLavaMushroomAttack/sLavaMushroomAttack.yy"}},
     {"id": {"name": "sLavaSlime", "path": "sprites/sLavaSlime/sLavaSlime.yy"}},
     {"id": {"name": "sLavaSlimeAttack", "path": "sprites/sLavaSlimeAttack/sLavaSlimeAttack.yy"}},
+    {"id": {"name": "sSkyTileset", "path": "sprites/sSkyTileset/sSkyTileset.yy"}},
     {"id": {"name": "sPlayerDown1", "path": "sprites/sPlayerDown1/sPlayerDown1.yy"}},
     {"id": {"name": "sPlayerDown2", "path": "sprites/sPlayerDown2/sPlayerDown2.yy"}},
     {"id": {"name": "sPlayerFall", "path": "sprites/sPlayerFall/sPlayerFall.yy"}},
     {"id": {"name": "sPlayerIdle", "path": "sprites/sPlayerIdle/sPlayerIdle.yy"}},
     {"id": {"name": "sPlayerJump", "path": "sprites/sPlayerJump/sPlayerJump.yy"}},
-    {"id": {"name": "sSkyTileset", "path": "sprites/sSkyTileset/sSkyTileset.yy"}},
     {"id": {"name": "sWall", "path": "sprites/sWall/sWall.yy"}},
     {"id": {"name": "CaveTileset", "path": "tilesets/CaveTileset/CaveTileset.yy"}},
     {"id": {"name": "EarthTileset", "path": "tilesets/EarthTileset/EarthTileset.yy"}},
     {"id": {"name": "SkyTileset", "path": "tilesets/SkyTileset/SkyTileset.yy"}}
   ],
+
   "resourceType": "GMProject",
   "resourceVersion": "2.0",
   "RoomOrderNodes": [
