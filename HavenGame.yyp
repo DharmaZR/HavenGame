@@ -60,6 +60,7 @@
     {"id":{"name":"scrEnemy","path":"scripts/scrEnemy/scrEnemy.yy",},},
     {"id":{"name":"BackgroundMusic","path":"sounds/BackgroundMusic/BackgroundMusic.yy",},},
     {"id":{"name":"DeathSound","path":"sounds/DeathSound/DeathSound.yy",},},
+    {"id":{"name":"playerDeath","path":"sounds/playerDeath/playerDeath.yy",},},
     {"id":{"name":"PogoStick","path":"sounds/PogoStick/PogoStick.yy",},},
     {"id":{"name":"SlimeBounce","path":"sounds/SlimeBounce/SlimeBounce.yy",},},
     {"id":{"name":"CaveSpike","path":"sprites/CaveSpike/CaveSpike.yy",},},
@@ -96,8 +97,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Sky","path":"rooms/Sky/Sky.yy",},},
     {"roomId":{"name":"Cave","path":"rooms/Cave/Cave.yy",},},
+    {"roomId":{"name":"Sky","path":"rooms/Sky/Sky.yy",},},
     {"roomId":{"name":"Test","path":"rooms/Test/Test.yy",},},
     {"roomId":{"name":"Title","path":"rooms/Title/Title.yy",},},
   ],

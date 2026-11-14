@@ -4,6 +4,7 @@ image_speed = 1;
 // dead: arc off the screen, then restart
 if (dead)
 {
+	audio_play_sound(playerDeath,3,false);
     if (sprite_index != sPlayerDeath) { sprite_index = sPlayerDeath; image_index = 0; }
     vsp = min(vsp + grav, max_fall);
     x += hsp;

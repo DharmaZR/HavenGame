@@ -14,6 +14,7 @@ function enemy_init()
     facing    = 1;
     attacking = false;
     dead      = false;
+	was_on_ground = place_meeting(x, y + 1, oWall);
 
     // sEarthSlime -> sEarthSlimeAttack, falls back to the base sprite if missing
     spr_move   = sprite_index;
@@ -33,6 +34,7 @@ function enemy_stomp()
     image_speed = 0;
     hsp = 0;
     vsp = -death_hop;
+	audio_play_sound(DeathSound,3,false);
 }
 
 function enemy_draw()

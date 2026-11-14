@@ -21,22 +21,26 @@ function EnemyMovement()
 
         if (abs(_dx) > 1) facing = sign(_dx);
 
-        var _gap  = (_dx > 0) ? _p.bbox_left - bbox_right : bbox_left - _p.bbox_right;
+        var _gap = (_dx > 0) ? _p.bbox_left - bbox_right : bbox_left - _p.bbox_right;
         var _same_height = _p.bbox_bottom >= bbox_top && _p.bbox_top <= bbox_bottom;
 
         if (_same_height && _gap <= attack_range) attacking = true;
 
-        // keep walking until actually touching the player
-        if (_dist <= chase_range && !place_meeting(x, y, _p)) hsp = facing * move_speed;
+        if (_dist <= chase_range && !place_meeting(x, y, _p))
+        {
+            hsp = facing * move_speed;
+        }
     }
 
     var _on_ground = place_meeting(x, y + 1, oWall);
+
     if (!can_walk_off_ledges && _on_ground && hsp != 0)
     {
         var _half = (bbox_right - bbox_left) / 2;
         if (!place_meeting(x + facing * _half, y + 1, oWall)) hsp = 0;
     }
 
+    var _previous_vsp = vsp;
     vsp = min(vsp + grav, max_fall);
 
     if (hsp != 0)
@@ -62,11 +66,23 @@ function EnemyMovement()
             if (place_meeting(x, y + _sv, oWall)) break;
             y += _sv;
         }
+
+        if (_previous_vsp > 0)
+        {
+            audio_play_sound(SlimeBounce, 3, false);
+        }
+
         vsp = 0;
     }
-    else y += vsp;
+    else
+    {
+        y += vsp;
+    }
 
     var _spr = attacking ? spr_attack : spr_move;
-    if (sprite_index != _spr) { sprite_index = _spr; image_index = 0; }
+    if (sprite_index != _spr)
+    {
+        sprite_index = _spr;
+        image_index = 0;
+    }
 }
-
