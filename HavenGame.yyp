@@ -102,9 +102,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"Title","path":"rooms/Title/Title.yy",},},
     {"roomId":{"name":"Cave","path":"rooms/Cave/Cave.yy",},},
     {"roomId":{"name":"Sky","path":"rooms/Sky/Sky.yy",},},
-    {"roomId":{"name":"Title","path":"rooms/Title/Title.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
