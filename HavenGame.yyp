@@ -33,6 +33,7 @@
     {"id":{"name":"IceSlime","path":"objects/IceSlime/IceSlime.yy",},},
     {"id":{"name":"LavaMushroom","path":"objects/LavaMushroom/LavaMushroom.yy",},},
     {"id":{"name":"LavaSlime","path":"objects/LavaSlime/LavaSlime.yy",},},
+    {"id":{"name":"oCollisionBuilder","path":"objects/oCollisionBuilder/oCollisionBuilder.yy",},},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"sCaveTileset","path":"sprites/sCaveTileset/sCaveTileset.yy",},},
