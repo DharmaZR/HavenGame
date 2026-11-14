@@ -48,3 +48,6 @@ Nanami Ishihara - Background Music, Player Design and Title Screen
 Ryan Ortellado - Game Design, Player Scripts 
 
 Dharma Zalavadiya - Enemy Scripts, Asset designs and Audio Control
+
+AI:
+Gemini was used to debug our code and additionally handle our function enemy_draw() code + for general documentation
