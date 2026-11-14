@@ -39,7 +39,7 @@
     {"id":{"name":"oCollisionBuilder","path":"objects/oCollisionBuilder/oCollisionBuilder.yy",},},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
 <<<<<<< Updated upstream
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"Test","path":"rooms/Test/Test.yy",},},
     {"id":{"name":"BackgroundMusic","path":"sounds/BackgroundMusic/BackgroundMusic.yy",},},
     {"id":{"name":"PogoStick","path":"sounds/PogoStick/PogoStick.yy",},},
     {"id":{"name":"SlimeBounce","path":"sounds/SlimeBounce/SlimeBounce.yy",},},
@@ -81,7 +81,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"Test","path":"rooms/Test/Test.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
