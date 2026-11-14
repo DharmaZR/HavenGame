@@ -55,7 +55,7 @@ function enemy_step()
             
             if (floor(image_index) == 0 && !audio_is_playing(SlimeBounce)) {
                 var _snd = audio_play_sound(SlimeBounce, 1, false);
-                audio_sound_gain(_snd, 1, 1);
+                audio_sound_gain(_snd, 2, 1);
                 audio_sound_gain(_snd, 0, 200);
             }
         }
@@ -109,7 +109,7 @@ function enemy_stomp()
     image_speed = 0;
     hsp = 0;
     vsp = -death_hop;
-	audio_play_sound(DeathSound,1,false);
+	audio_play_sound(DeathSound,2,false);
 }
 
 function enemy_draw()
