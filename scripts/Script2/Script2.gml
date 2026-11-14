@@ -25,6 +25,7 @@ function enemy_init()
 
 function enemy_step()
 {
+ 
     if (dead)
     {
         vsp += grav;
@@ -46,8 +47,18 @@ function enemy_step()
 
         if (abs(_dx) > 1) facing = sign(_dx);
 
-        if (_dist <= attack_range) attacking = true;
-        else if (_dist <= chase_range) hsp = facing * move_speed;
+        if (_dist <= attack_range) {
+            attacking = true;
+        }
+        else if (_dist <= chase_range) {
+            hsp = facing * move_speed;
+            
+            if (floor(image_index) == 0 && !audio_is_playing(SlimeBounce)) {
+                var _snd = audio_play_sound(SlimeBounce, 1, false);
+                audio_sound_gain(_snd, 1, 1);
+                audio_sound_gain(_snd, 0, 200);
+            }
+        }
     }
 
     var _on_ground = place_meeting(x, y + 1, oWall);
@@ -89,7 +100,6 @@ function enemy_step()
     var _spr = attacking ? spr_attack : spr_move;
     if (sprite_index != _spr) { sprite_index = _spr; image_index = 0; }
 }
-
 function enemy_stomp()
 {
     if (dead) return;
@@ -109,7 +119,7 @@ function enemy_draw()
     var _dx = x;
     var _dy = y;
 
-    // keep the sprite in its box when mirrored (origins are top-left)
+   
     if (_flip) _dx += (sprite_get_width(sprite_index)  - 2 * sprite_get_xoffset(sprite_index)) * image_xscale;
     if (dead)  _dy += (sprite_get_height(sprite_index) - 2 * sprite_get_yoffset(sprite_index)) * image_yscale;
 
