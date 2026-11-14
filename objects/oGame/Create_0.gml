@@ -1,0 +1,51 @@
+if (instance_number(oGame) > 1) { instance_destroy(); exit; }
+persistent = true;
+depth = -10000;
+
+fade_out_time = 0.4; // seconds
+fade_in_time  = 0.4;
+fade_col      = c_black;
+music_gain    = 1;
+
+fade        = 0;
+state       = "none"; // "out", "in"
+target_room = -1;
+music       = noone;
+music_inst  = -1;
+
+room_music = function(_room)
+{
+    switch (_room)
+    {
+        case Title: return BackgroundMusic;
+        case Cave:  return BackgroundMusic;
+        case Test:  return BackgroundMusic;
+        default:    return noone;
+    }
+}
+
+update_music = function()
+{
+    var _track = room_music(room);
+    if (_track == music) return;
+
+    if (music_inst != -1) audio_stop_sound(music_inst);
+    music      = _track;
+    music_inst = -1;
+    if (_track != noone) music_inst = audio_play_sound(_track, 10, false, music_gain);
+}
+
+next_room = function()
+{
+    if (state != "none") return;
+    state = "out";
+    target_room = room_next(room);
+    if (target_room == -1) target_room = room;
+}
+
+frozen = function()
+{
+    return state == "out";
+}
+
+update_music();

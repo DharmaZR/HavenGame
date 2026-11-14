@@ -82,6 +82,7 @@ hurt_timer = 0;
 
 mask_index = sPlayerIdle;
 
+if (!instance_exists(oGame)) instance_create_depth(0, 0, -10000, oGame);
 if (!instance_exists(oCamera)) instance_create_layer(x, y, layer, oCamera);
 
 approach = function(_val, _target, _amt)

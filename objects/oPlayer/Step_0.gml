@@ -1,3 +1,6 @@
+if (oGame.frozen()) { image_speed = 0; exit; }
+image_speed = 1;
+
 var _dir = (keyboard_check(vk_right) || keyboard_check(ord("D"))) - (keyboard_check(vk_left) || keyboard_check(ord("A")));
 var _jump = keyboard_check(vk_space) || keyboard_check(vk_up) || keyboard_check(ord("W"));
 var _down = keyboard_check(vk_down) || keyboard_check(ord("S"));
@@ -128,6 +131,9 @@ if (vsp != 0)
     }
     else y += vsp;
 }
+
+// end of level
+if (bbox_right >= room_width - 1) oGame.next_room();
 
 // damage
 if (hurt_timer > 0) hurt_timer--;

@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"SlimeBounce",
   "parent":{
-    "name":"audio",
-    "path":"folders/audio.yy",
+    "name":"sfx",
+    "path":"folders/audio/sfx.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
