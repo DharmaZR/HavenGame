@@ -182,7 +182,11 @@ else
     if (_src == noone) _src = instance_place(x + 1, y, oHazard);
     if (_src == noone) _src = instance_place(x - 1, y, oHazard);
 
+    var _fb = instance_place(x, y, oFireball);
+    if (_src == noone && _fb != noone) _src = _fb;
+
     if (_src != noone) hurt(_src);
+    if (_fb != noone && _src == _fb) instance_destroy(_fb);
 }
 
 // animating
