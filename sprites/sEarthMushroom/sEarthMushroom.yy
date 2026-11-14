@@ -31,8 +31,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"sEnemies",
-    "path":"folders/sEnemies.yy",
+    "name":"Mushrooms",
+    "path":"folders/sEnemies/Mushrooms.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
