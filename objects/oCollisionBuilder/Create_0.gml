@@ -1,27 +1,50 @@
-// every non-empty tile on these layers is solid
-var _solid_layers = ["Tiles_1"];
-var _wall_layer   = "Instances";
 
-if (!layer_exists(_wall_layer)) layer_create(100, _wall_layer);
+// Every non-empty tile on these layers is solid
+var _solid_layers = ["Tiles_1"];
+var _wall_layer = "Instances";
+
+if (!layer_exists(_wall_layer))
+{
+    layer_create(100, _wall_layer);
+}
 
 var _count = 0;
 
 for (var l = 0; l < array_length(_solid_layers); l++)
 {
     var _lay = layer_get_id(_solid_layers[l]);
-    if (_lay == -1) { show_debug_message("oCollisionBuilder: no layer named " + _solid_layers[l]); continue; }
+
+    if (_lay == -1)
+    {
+        show_debug_message(
+            "oCollisionBuilder: no layer named "
+            + _solid_layers[l]
+        );
+        continue;
+    }
 
     var _map = layer_tilemap_get_id(_lay);
-    if (_map == -1) { show_debug_message("oCollisionBuilder: layer " + _solid_layers[l] + " has no tileset"); continue; }
 
-    var _tw   = tilemap_get_tile_width(_map);
-    var _th   = tilemap_get_tile_height(_map);
+    if (_map == -1)
+    {
+        show_debug_message(
+            "oCollisionBuilder: layer "
+            + _solid_layers[l]
+            + " has no tileset"
+        );
+        continue;
+    }
+
+    var _tw = tilemap_get_tile_width(_map);
+    var _th = tilemap_get_tile_height(_map);
+
     var _cols = tilemap_get_width(_map);
     var _rows = tilemap_get_height(_map);
-    var _ox   = tilemap_get_x(_map);
-    var _oy   = tilemap_get_y(_map);
 
-    // merge each horizontal run of tiles into one wall
+    var _ox = tilemap_get_x(_map);
+    var _oy = tilemap_get_y(_map);
+
+    // Merge horizontal runs of solid tiles
     for (var r = 0; r < _rows; r++)
     {
         var _run_start = -1;
@@ -29,7 +52,15 @@ for (var l = 0; l < array_length(_solid_layers); l++)
         for (var c = 0; c <= _cols; c++)
         {
             var _solid = false;
-            if (c < _cols) _solid = (tile_get_index(tilemap_get(_map, c, r)) != 0);
+
+            if (c < _cols)
+            {
+                _solid = (
+                    tile_get_index(
+                        tilemap_get(_map, c, r)
+                    ) != 0
+                );
+            }
 
             if (_solid && _run_start == -1)
             {
@@ -37,10 +68,31 @@ for (var l = 0; l < array_length(_solid_layers); l++)
             }
             else if (!_solid && _run_start != -1)
             {
-                var _len  = c - _run_start;
-                var _wall = instance_create_layer(_ox + _run_start * _tw, _oy + r * _th, _wall_layer, oWall);
-                _wall.image_xscale = (_len * _tw) / sprite_get_width(sWall);
-                _wall.image_yscale = _th / sprite_get_height(sWall);
+                var _len = c - _run_start;
+
+                var _wall = instance_create_layer(
+                    _ox + _run_start * _tw,
+                    _oy + r * _th,
+                    _wall_layer,
+                    oWall
+                );
+
+                // Scale wall to cover the entire run
+                _wall.image_xscale =
+                    (_len * _tw) / sprite_get_width(sWall);
+
+                _wall.image_yscale =
+                    _th / sprite_get_height(sWall);
+
+                // Correct for the sprite origin
+                _wall.x +=
+                    sprite_get_xoffset(sWall)
+                    * _wall.image_xscale;
+
+                _wall.y +=
+                    sprite_get_yoffset(sWall)
+                    * _wall.image_yscale;
+
                 _run_start = -1;
                 _count++;
             }
@@ -48,6 +100,10 @@ for (var l = 0; l < array_length(_solid_layers); l++)
     }
 }
 
-show_debug_message("oCollisionBuilder: created " + string(_count) + " oWall(s)");
+show_debug_message(
+    "oCollisionBuilder: created "
+    + string(_count)
+    + " oWall(s)"
+);
 
 instance_destroy();
