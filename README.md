@@ -53,3 +53,4 @@ AI:
 Gemini was used to debug our code and additionally handle our function enemy_draw() code + for general documentation
 
 itch link: [https://oof13fan.itch.io/bop-to-the-top](url)
+slides link (explanations and journey) - [https://docs.google.com/presentation/d/1xWbyDsmSIYGoqcrKqM8khCqoLIgMcpmq44DFLHQlMgs/edit?usp=sharing](url)
