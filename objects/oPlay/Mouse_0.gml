@@ -1,1 +1,1 @@
-room_goto(Cave);
+oGame.go_to(Cave);

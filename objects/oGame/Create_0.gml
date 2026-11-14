@@ -9,6 +9,8 @@ fade_out_time = 0.4; // seconds
 fade_in_time  = 0.4;
 fade_col      = c_black;
 music_gain    = 1;
+end_text      = "Thank you for playing!";
+end_text_col  = c_white;
 
 fade        = 0;
 state       = "none"; // "out", "in"
@@ -21,8 +23,10 @@ room_music = function(_room)
     switch (_room)
     {
         case Title: return BackgroundMusic;
+        case Tutorial: return BackgroundMusic;
         case Cave:  return BackgroundMusic;
-        case Test:  return BackgroundMusic;
+        case Sky:   return SkyBackgroundMusic;
+        case End:   return allclear;
         default:    return noone;
     }
 }

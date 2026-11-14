@@ -152,6 +152,7 @@ die = function()
     if (dead) return;
     dead = true;
     hp = 0;
+    audio_play_sound(playerDeath, 3, false);
     charging = false;
     charge = 0;
     sprite_index = sPlayerDeath;
