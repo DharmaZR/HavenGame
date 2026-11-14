@@ -1,90 +1,191 @@
+
 {
-  "$GMProject":"v1",
-  "%Name":"HavenGame",
-  "AudioGroups":[
-    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+  "$GMProject": "v1",
+  "%Name": "HavenGame",
+  "AudioGroups": [
+    {
+      "$GMAudioGroup": "v1",
+      "%Name": "audiogroup_default",
+      "exportDir": "",
+      "name": "audiogroup_default",
+      "resourceType": "GMAudioGroup",
+      "resourceVersion": "2.0",
+      "targets": -1
+    }
   ],
-  "configs":{
-    "children":[],
-    "name":"Default",
+  "configs": {
+    "children": [],
+    "name": "Default"
   },
-  "defaultScriptType":0,
-  "Folders":[
-    {"$GMFolder":"","%Name":"Enemies","folderPath":"folders/Enemies.yy","name":"Enemies","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"audio","folderPath":"folders/audio.yy","name":"audio","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"objects","folderPath":"folders/objects.yy","name":"objects","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"rooms","folderPath":"folders/rooms.yy","name":"rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"sEnemies","folderPath":"folders/sEnemies.yy","name":"sEnemies","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Mushrooms","folderPath":"folders/sEnemies/Mushrooms.yy","name":"Mushrooms","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Slimes","folderPath":"folders/sEnemies/Slimes.yy","name":"Slimes","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"sprites","folderPath":"folders/sprites.yy","name":"sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"placeholder","folderPath":"folders/sprites/placeholder.yy","name":"placeholder","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"tilesets","folderPath":"folders/tilesets.yy","name":"tilesets","resourceType":"GMFolder","resourceVersion":"2.0",},
+  "defaultScriptType": 0,
+  "Folders": [
+    {
+      "$GMFolder": "",
+      "%Name": "audio",
+      "folderPath": "folders/audio.yy",
+      "name": "audio",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "Enemies",
+      "folderPath": "folders/Enemies.yy",
+      "name": "Enemies",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "objects",
+      "folderPath": "folders/objects.yy",
+      "name": "objects",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "rooms",
+      "folderPath": "folders/rooms.yy",
+      "name": "rooms",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "sEnemies",
+      "folderPath": "folders/sEnemies.yy",
+      "name": "sEnemies",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "Mushrooms",
+      "folderPath": "folders/sEnemies/Mushrooms.yy",
+      "name": "Mushrooms",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "Slimes",
+      "folderPath": "folders/sEnemies/Slimes.yy",
+      "name": "Slimes",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "sprites",
+      "folderPath": "folders/sprites.yy",
+      "name": "sprites",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "placeholder",
+      "folderPath": "folders/sprites/placeholder.yy",
+      "name": "placeholder",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "player",
+      "folderPath": "folders/sprites/player.yy",
+      "name": "player",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    },
+    {
+      "$GMFolder": "",
+      "%Name": "tilesets",
+      "folderPath": "folders/tilesets.yy",
+      "name": "tilesets",
+      "resourceType": "GMFolder",
+      "resourceVersion": "2.0"
+    }
   ],
-  "ForcedPrefabProjectReferences":[],
-  "IncludedFiles":[],
-  "isEcma":false,
-  "LibraryEmitters":[],
-  "MetaData":{
-    "IDEVersion":"2026.0.0.16",
+  "ForcedPrefabProjectReferences": [],
+  "IncludedFiles": [],
+  "isEcma": false,
+  "LibraryEmitters": [],
+  "MetaData": {
+    "IDEVersion": "2026.0.0.16"
   },
-  "name":"HavenGame",
-  "resources":[
-    {"id":{"name":"EarthMushroom","path":"objects/EarthMushroom/EarthMushroom.yy",},},
-    {"id":{"name":"EarthSlime","path":"objects/EarthSlime/EarthSlime.yy",},},
-    {"id":{"name":"IceMushroom","path":"objects/IceMushroom/IceMushroom.yy",},},
-    {"id":{"name":"IceSlime","path":"objects/IceSlime/IceSlime.yy",},},
-    {"id":{"name":"LavaMushroom","path":"objects/LavaMushroom/LavaMushroom.yy",},},
-    {"id":{"name":"LavaSlime","path":"objects/LavaSlime/LavaSlime.yy",},},
-    {"id":{"name":"oCollisionBuilder","path":"objects/oCollisionBuilder/oCollisionBuilder.yy",},},
-    {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
-<<<<<<< Updated upstream
-    {"id":{"name":"Test","path":"rooms/Test/Test.yy",},},
-    {"id":{"name":"BackgroundMusic","path":"sounds/BackgroundMusic/BackgroundMusic.yy",},},
-    {"id":{"name":"PogoStick","path":"sounds/PogoStick/PogoStick.yy",},},
-    {"id":{"name":"SlimeBounce","path":"sounds/SlimeBounce/SlimeBounce.yy",},},
-=======
-    {"id":{"name":"Cave","path":"rooms/Cave/Cave.yy",},},
-    {"id":{"name":"Test","path":"rooms/Test/Test.yy",},},
-    {"id":{"name":"Title","path":"rooms/Title/Title.yy",},},
-    {"id":{"name":"EnemyMovement","path":"scripts/EnemyMovement/EnemyMovement.yy",},},
->>>>>>> Stashed changes
-    {"id":{"name":"sCaveTileset","path":"sprites/sCaveTileset/sCaveTileset.yy",},},
-    {"id":{"name":"sEarthMushroom","path":"sprites/sEarthMushroom/sEarthMushroom.yy",},},
-    {"id":{"name":"sEarthMushroomAttack","path":"sprites/sEarthMushroomAttack/sEarthMushroomAttack.yy",},},
-    {"id":{"name":"sEarthSlime","path":"sprites/sEarthSlime/sEarthSlime.yy",},},
-<<<<<<< Updated upstream
-=======
-    {"id":{"name":"sEarthSlimeAttack","path":"sprites/sEarthSlimeAttack/sEarthSlimeAttack.yy",},},
-    {"id":{"name":"sEarthTileset","path":"sprites/sEarthTileset/sEarthTileset.yy",},},
->>>>>>> Stashed changes
-    {"id":{"name":"sIceMushroom","path":"sprites/sIceMushroom/sIceMushroom.yy",},},
-    {"id":{"name":"sIceMushroomAttack","path":"sprites/sIceMushroomAttack/sIceMushroomAttack.yy",},},
-    {"id":{"name":"sIceSlime","path":"sprites/sIceSlime/sIceSlime.yy",},},
-    {"id":{"name":"sIceSlimeAttack","path":"sprites/sIceSlimeAttack/sIceSlimeAttack.yy",},},
-    {"id":{"name":"sLavaMushroom","path":"sprites/sLavaMushroom/sLavaMushroom.yy",},},
-    {"id":{"name":"sLavaMushroomAttack","path":"sprites/sLavaMushroomAttack/sLavaMushroomAttack.yy",},},
-    {"id":{"name":"sLavaSlime","path":"sprites/sLavaSlime/sLavaSlime.yy",},},
-<<<<<<< Updated upstream
-=======
-    {"id":{"name":"sLavaSlimeAttack","path":"sprites/sLavaSlimeAttack/sLavaSlimeAttack.yy",},},
-    {"id":{"name":"sPlayerDown1","path":"sprites/sPlayerDown1/sPlayerDown1.yy",},},
-    {"id":{"name":"sPlayerDown2","path":"sprites/sPlayerDown2/sPlayerDown2.yy",},},
-    {"id":{"name":"sPlayerFall","path":"sprites/sPlayerFall/sPlayerFall.yy",},},
-    {"id":{"name":"sPlayerIdle","path":"sprites/sPlayerIdle/sPlayerIdle.yy",},},
-    {"id":{"name":"sPlayerJump","path":"sprites/sPlayerJump/sPlayerJump.yy",},},
-    {"id":{"name":"sSkyTileset","path":"sprites/sSkyTileset/sSkyTileset.yy",},},
->>>>>>> Stashed changes
-    {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},},
-    {"id":{"name":"CaveTileset","path":"tilesets/CaveTileset/CaveTileset.yy",},},
+  "name": "HavenGame",
+  "resources": [
+    {"id": {"name": "EarthMushroom", "path": "objects/EarthMushroom/EarthMushroom.yy"}},
+    {"id": {"name": "EarthSlime", "path": "objects/EarthSlime/EarthSlime.yy"}},
+    {"id": {"name": "IceMushroom", "path": "objects/IceMushroom/IceMushroom.yy"}},
+    {"id": {"name": "IceSlime", "path": "objects/IceSlime/IceSlime.yy"}},
+    {"id": {"name": "LavaMushroom", "path": "objects/LavaMushroom/LavaMushroom.yy"}},
+    {"id": {"name": "LavaSlime", "path": "objects/LavaSlime/LavaSlime.yy"}},
+    {"id": {"name": "oCamera", "path": "objects/oCamera/oCamera.yy"}},
+    {"id": {"name": "oCollisionBuilder", "path": "objects/oCollisionBuilder/oCollisionBuilder.yy"}},
+    {"id": {"name": "oPlayer", "path": "objects/oPlayer/oPlayer.yy"}},
+    {"id": {"name": "oWall", "path": "objects/oWall/oWall.yy"},
+
+    },
+    {"id": {"name": "Cave", "path": "rooms/Cave/Cave.yy"}},
+    {"id": {"name": "Test", "path": "rooms/Test/Test.yy"}},
+    {"id": {"name": "Title", "path": "rooms/Title/Title.yy"}},
+    {"id": {"name": "EnemyMovement", "path": "scripts/EnemyMovement/EnemyMovement.yy"}},
+    {"id": {"name": "BackgroundMusic", "path": "sounds/BackgroundMusic/BackgroundMusic.yy"}},
+    {"id": {"name": "PogoStick", "path": "sounds/PogoStick/PogoStick.yy"}},
+    {"id": {"name": "SlimeBounce", "path": "sounds/SlimeBounce/SlimeBounce.yy"}},
+    {"id": {"name": "sCaveTileset", "path": "sprites/sCaveTileset/sCaveTileset.yy"}},
+    {"id": {"name": "sEarthMushroom", "path": "sprites/sEarthMushroom/sEarthMushroom.yy"}},
+    {"id": {"name": "sEarthMushroomAttack", "path": "sprites/sEarthMushroomAttack/sEarthMushroomAttack.yy"}},
+    {"id": {"name": "sEarthSlime", "path": "sprites/sEarthSlime/sEarthSlime.yy"}},
+    {"id": {"name": "sEarthSlimeAttack", "path": "sprites/sEarthSlimeAttack/sEarthSlimeAttack.yy"}},
+    {"id": {"name": "sEarthTileset", "path": "sprites/sEarthTileset/sEarthTileset.yy"}},
+    {"id": {"name": "sIceMushroom", "path": "sprites/sIceMushroom/sIceMushroom.yy"}},
+    {"id": {"name": "sIceMushroomAttack", "path": "sprites/sIceMushroomAttack/sIceMushroomAttack.yy"}},
+    {"id": {"name": "sIceSlime", "path": "sprites/sIceSlime/sIceSlime.yy"}},
+    {"id": {"name": "sIceSlimeAttack", "path": "sprites/sIceSlimeAttack/sIceSlimeAttack.yy"}},
+    {"id": {"name": "sLavaMushroom", "path": "sprites/sLavaMushroom/sLavaMushroom.yy"}},
+    {"id": {"name": "sLavaMushroomAttack", "path": "sprites/sLavaMushroomAttack/sLavaMushroomAttack.yy"}},
+    {"id": {"name": "sLavaSlime", "path": "sprites/sLavaSlime/sLavaSlime.yy"}},
+    {"id": {"name": "sLavaSlimeAttack", "path": "sprites/sLavaSlimeAttack/sLavaSlimeAttack.yy"}},
+    {"id": {"name": "sPlayerDown1", "path": "sprites/sPlayerDown1/sPlayerDown1.yy"}},
+    {"id": {"name": "sPlayerDown2", "path": "sprites/sPlayerDown2/sPlayerDown2.yy"}},
+    {"id": {"name": "sPlayerFall", "path": "sprites/sPlayerFall/sPlayerFall.yy"}},
+    {"id": {"name": "sPlayerIdle", "path": "sprites/sPlayerIdle/sPlayerIdle.yy"}},
+    {"id": {"name": "sPlayerJump", "path": "sprites/sPlayerJump/sPlayerJump.yy"}},
+    {"id": {"name": "sSkyTileset", "path": "sprites/sSkyTileset/sSkyTileset.yy"}},
+    {"id": {"name": "sWall", "path": "sprites/sWall/sWall.yy"}},
+    {"id": {"name": "CaveTileset", "path": "tilesets/CaveTileset/CaveTileset.yy"}},
+    {"id": {"name": "EarthTileset", "path": "tilesets/EarthTileset/EarthTileset.yy"}},
+    {"id": {"name": "SkyTileset", "path": "tilesets/SkyTileset/SkyTileset.yy"}}
   ],
-  "resourceType":"GMProject",
-  "resourceVersion":"2.0",
-  "RoomOrderNodes":[
-    {"roomId":{"name":"Test","path":"rooms/Test/Test.yy",},},
+  "resourceType": "GMProject",
+  "resourceVersion": "2.0",
+  "RoomOrderNodes": [
+    {"roomId": {"name": "Test", "path": "rooms/Test/Test.yy"}},
+    {"roomId": {"name": "Cave", "path": "rooms/Cave/Cave.yy"}},
+    {"roomId": {"name": "Title", "path": "rooms/Title/Title.yy"}}
   ],
-  "templateType":"game",
-  "TextureGroups":[
-    {"$GMTextureGroup":"","%Name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"Default","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
-  ],
+  "templateType": "game",
+  "TextureGroups": [
+    {
+      "$GMTextureGroup": "",
+      "%Name": "Default",
+      "autocrop": true,
+      "border": 2,
+      "compressFormat": "bz2",
+      "customOptions": "",
+      "directory": "",
+      "groupParent": null,
+      "isScaled": true,
+      "loadType": "default",
+      "mipsToGenerate": 0,
+      "name": "Default",
+      "resourceType": "GMTextureGroup",
+      "resourceVersion": "2.0",
+      "targets": -1
+    }
+  ]
 }

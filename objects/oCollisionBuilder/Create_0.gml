@@ -1,13 +1,6 @@
-/// oCollisionBuilder - Create
-// Reads the solid tile layer(s) and spawns invisible oWall instances
-// wherever a tile is painted. Paint tiles, collision comes for free.
-//
-// Place ONE of these in every room (any layer is fine).
-// Every non-empty tile on these layers counts as solid.
-// Put decoration (background rocks, vines, etc.) on a DIFFERENT tile layer.
-
-var _solid_layers = ["Tiles_1"];       // tile layer names that should be solid
-var _wall_layer   = "Instances";       // instance layer the oWalls are created on
+// every non-empty tile on these layers is solid
+var _solid_layers = ["Tiles_1"];
+var _wall_layer   = "Instances";
 
 if (!layer_exists(_wall_layer)) layer_create(100, _wall_layer);
 
@@ -28,8 +21,7 @@ for (var l = 0; l < array_length(_solid_layers); l++)
     var _ox   = tilemap_get_x(_map);
     var _oy   = tilemap_get_y(_map);
 
-    // Scan each row and merge horizontal runs of solid tiles into ONE wide oWall.
-    // (Fewer instances = faster collision checks, and no seams to snag on.)
+    // merge each horizontal run of tiles into one wall
     for (var r = 0; r < _rows; r++)
     {
         var _run_start = -1;
@@ -41,11 +33,11 @@ for (var l = 0; l < array_length(_solid_layers); l++)
 
             if (_solid && _run_start == -1)
             {
-                _run_start = c;                       // run begins
+                _run_start = c;
             }
             else if (!_solid && _run_start != -1)
             {
-                var _len  = c - _run_start;           // run ended at c-1
+                var _len  = c - _run_start;
                 var _wall = instance_create_layer(_ox + _run_start * _tw, _oy + r * _th, _wall_layer, oWall);
                 _wall.image_xscale = (_len * _tw) / sprite_get_width(sWall);
                 _wall.image_yscale = _th / sprite_get_height(sWall);
@@ -58,4 +50,4 @@ for (var l = 0; l < array_length(_solid_layers); l++)
 
 show_debug_message("oCollisionBuilder: created " + string(_count) + " oWall(s)");
 
-instance_destroy(); // job done, no need to stick around
+instance_destroy();
