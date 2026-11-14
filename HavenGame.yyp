@@ -25,7 +25,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.4.222",
+    "IDEVersion":"2026.0.0.16",
   },
   "name":"HavenGame",
   "resources":[
@@ -50,12 +50,12 @@
     {"id":{"name":"sIceSlime","path":"sprites/sIceSlime/sIceSlime.yy",},},
     {"id":{"name":"sLavaMushroom","path":"sprites/sLavaMushroom/sLavaMushroom.yy",},},
     {"id":{"name":"sLavaSlime","path":"sprites/sLavaSlime/sLavaSlime.yy",},},
-    {"id":{"name":"sSkyTileset","path":"sprites/sSkyTileset/sSkyTileset.yy",},},
     {"id":{"name":"sPlayerDown1","path":"sprites/sPlayerDown1/sPlayerDown1.yy",},},
     {"id":{"name":"sPlayerDown2","path":"sprites/sPlayerDown2/sPlayerDown2.yy",},},
     {"id":{"name":"sPlayerFall","path":"sprites/sPlayerFall/sPlayerFall.yy",},},
     {"id":{"name":"sPlayerIdle","path":"sprites/sPlayerIdle/sPlayerIdle.yy",},},
     {"id":{"name":"sPlayerJump","path":"sprites/sPlayerJump/sPlayerJump.yy",},},
+    {"id":{"name":"sSkyTileset","path":"sprites/sSkyTileset/sSkyTileset.yy",},},
     {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},},
     {"id":{"name":"CaveTileset","path":"tilesets/CaveTileset/CaveTileset.yy",},},
     {"id":{"name":"EarthTileset","path":"tilesets/EarthTileset/EarthTileset.yy",},},
