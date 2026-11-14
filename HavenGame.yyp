@@ -68,7 +68,6 @@
 
     {"id":{"name":"Cave","path":"rooms/Cave/Cave.yy"}},
     {"id":{"name":"Sky","path":"rooms/Sky/Sky.yy"}},
-    {"id":{"name":"Test","path":"rooms/Test/Test.yy"}},
     {"id":{"name":"Title","path":"rooms/Title/Title.yy"}},
     {"id":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy"}},
 
@@ -123,7 +122,6 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"Title","path":"rooms/Title/Title.yy"}},
     {"roomId":{"name":"Tutorial","path":"rooms/Tutorial/Tutorial.yy"}},
-    {"roomId":{"name":"Test","path":"rooms/Test/Test.yy"}},
     {"roomId":{"name":"Cave","path":"rooms/Cave/Cave.yy"}},
     {"roomId":{"name":"Sky","path":"rooms/Sky/Sky.yy"}}
   ],
