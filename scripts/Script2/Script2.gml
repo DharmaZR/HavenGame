@@ -109,6 +109,7 @@ function enemy_stomp()
     image_speed = 0;
     hsp = 0;
     vsp = -death_hop;
+	audio_play_sound(DeathSound,1,false);
 }
 
 function enemy_draw()
