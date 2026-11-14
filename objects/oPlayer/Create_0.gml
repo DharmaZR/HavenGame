@@ -36,6 +36,13 @@ hurt_knock_h  = 2.5;
 hurt_knock_v  = 4.0;
 hurt_blink    = 4;
 
+// death
+death_hspeed  = 1.5;
+death_vspeed  = 5.0;
+pogo_hspeed   = 2.0;
+pogo_vspeed   = 6.0;
+death_wait    = 1; // seconds below the screen before restarting
+
 // no-super flash
 nosuper_col = make_colour_rgb(150, 150, 150);
 nosuper_rate  = 6; // frames per flash
@@ -79,6 +86,8 @@ super_used  = false;
 flash_timer = 0;
 hp = hp_max;
 hurt_timer = 0;
+dead = false;
+death_timer = 0;
 
 mask_index = sPlayerIdle;
 
@@ -135,11 +144,30 @@ hurt = function(_src)
     hsp = _dir * hurt_knock_h;
     launch(hurt_knock_v, false);
 
-    if (hp <= 0) room_restart();
+    if (hp <= 0) die();
+}
+
+die = function()
+{
+    if (dead) return;
+    dead = true;
+    hp = 0;
+    charging = false;
+    charge = 0;
+    sprite_index = sPlayerDeath;
+    image_index = 0;
+    hsp = -facing * death_hspeed;
+    vsp = -death_vspeed;
+
+    var _pogo = instance_create_depth(x, y, depth - 1, oPogoDrop);
+    _pogo.facing = facing;
+    _pogo.hsp = facing * pogo_hspeed;
+    _pogo.vsp = -pogo_vspeed;
 }
 
 on_bounce = function(_was_super)
 {
     bounce_count++;
+    global.total_bounces++;
     // TODO: attack bar charge
 }

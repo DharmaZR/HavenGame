@@ -2,6 +2,9 @@ if (instance_number(oGame) > 1) { instance_destroy(); exit; }
 persistent = true;
 depth = -10000;
 
+global.total_bounces  = 0;
+global.enemies_killed = 0;
+
 fade_out_time = 0.4; // seconds
 fade_in_time  = 0.4;
 fade_col      = c_black;
@@ -41,10 +44,20 @@ update_music = function()
 
 next_room = function()
 {
+    var _next = room_next(room);
+    go_to(_next == -1 ? room : _next);
+}
+
+restart_room = function()
+{
+    go_to(room);
+}
+
+go_to = function(_room)
+{
     if (state != "none") return;
     state = "out";
-    target_room = room_next(room);
-    if (target_room == -1) target_room = room;
+    target_room = _room;
 
     // fade music only if the next room plays something else
     if (music_inst != -1 && room_music(target_room) != music)

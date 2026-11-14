@@ -1,4 +1,5 @@
 if (!instance_exists(target)) exit;
+if (variable_instance_exists(target, "dead") && target.dead) exit;
 
 var _w = camera_get_view_width(cam);
 var _h = camera_get_view_height(cam);

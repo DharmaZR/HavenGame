@@ -5,7 +5,7 @@ function enemy_init()
     attack_range   = 6; // edge-to-edge gap in pixels
     grav           = 0.3;
     max_fall       = 8;
-    stay_on_ledges = true;
+    can_walk_off_ledges = false;
     sprite_faces_right = true;
     death_hop      = 3;
 
@@ -27,6 +27,7 @@ function enemy_stomp()
 {
     if (dead) return;
     dead = true;
+    global.enemies_killed++;
     attacking = false;
     sprite_index = spr_move;
     image_speed = 0;

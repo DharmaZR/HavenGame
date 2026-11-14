@@ -31,7 +31,7 @@ function EnemyMovement()
     }
 
     var _on_ground = place_meeting(x, y + 1, oWall);
-    if (stay_on_ledges && _on_ground && hsp != 0)
+    if (!can_walk_off_ledges && _on_ground && hsp != 0)
     {
         var _half = (bbox_right - bbox_left) / 2;
         if (!place_meeting(x + facing * _half, y + 1, oWall)) hsp = 0;
